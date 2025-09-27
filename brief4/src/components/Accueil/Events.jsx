@@ -1,41 +1,42 @@
+import { useGlobalContext } from "../../contexts/GlobalContext";
+
 const Events = () => {
+  const { events } = useGlobalContext();
+
+  // Format date for display
+  const formatDate = (dateString) => {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date(dateString).toLocaleDateString('fr-FR', options);
+  };
+
   return (
     <section>
       <h2 className="text-sm font-semibold mb-4">Évènements à venir</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-          <img 
-            src="https://picsum.photos/seed/event1/400/200" 
-            className="w-full h-32 object-cover" 
-            alt="Event De city here"
-          />
-          <div className="p-3">
-            <h4 className="text-sm font-semibold mb-2">Event De city here</h4>
-            <p className="text-xs text-gray-600">Date ici 2025. ArtConnect Maroc a reçu plus de 200 traditions et oeuvres pour mettre en valeur les talents locaux et transmettre la culture.</p>
+        {events.map((event) => (
+          <div
+            key={event.id}
+            className="bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md"
+          >
+            <img
+              src={event.image}
+              className="w-full h-32 object-cover"
+              alt={event.title}
+            />
+            <div className="p-3">
+              <h4 className="text-sm font-semibold mb-2">{event.title}</h4>
+              <p className="text-xs text-gray-600">
+                {formatDate(event.startDate)} - {event.location}
+              </p>
+              <p className="text-xs text-gray-600 mt-1">{event.description}</p>
+            </div>
           </div>
-        </div>
-        <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-          <img 
-            src="https://picsum.photos/seed/event2/400/200" 
-            className="w-full h-32 object-cover" 
-            alt="Event De city here"
-          />
-          <div className="p-3">
-            <h4 className="text-sm font-semibold mb-2">Event De city here</h4>
-            <p className="text-xs text-gray-600">Date ici 2025. ArtConnect Maroc a reçu plus de 200 traditions et oeuvres pour mettre en valeur les talents locaux et transmettre la culture.</p>
+        ))}
+        {events.length === 0 && (
+          <div className="col-span-full text-center py-4">
+            <p className="text-gray-500">Aucun événement à venir pour le moment.</p>
           </div>
-        </div>
-        <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-          <img 
-            src="https://picsum.photos/seed/event3/400/200" 
-            className="w-full h-32 object-cover" 
-            alt="Event De city here"
-          />
-          <div className="p-3">
-            <h4 className="text-sm font-semibold mb-2">Event De city here</h4>
-            <p className="text-xs text-gray-600">Date ici 2025. ArtConnect Maroc a reçu plus de 200 traditions et oeuvres pour mettre en valeur les talents locaux et transmettre la culture.</p>
-          </div>
-        </div>
+        )}
       </div>
     </section>
   );

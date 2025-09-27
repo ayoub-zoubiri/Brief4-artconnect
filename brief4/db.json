@@ -1,0 +1,32 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "Artisanat"
+    },
+    {
+      "id": "2",
+      "name": "Gastronomie"
+    },
+    {
+      "id": "3",
+      "name": "Habits"
+    },
+    {
+      "id": "4",
+      "name": "Architecture"
+    },
+    {
+      "id": "5",
+      "name": "Musique & Danse"
+    },
+    {
+      "id": "4a2a",
+      "name": "xcv"
+    }
+  ],
+  "artisans": [],
+  "oeuvres": [],
+  "favorites": [],
+  "events": []
+}

@@ -1,44 +1,29 @@
+const categoryData = [
+  { id: 1, name: "Artisanat", icon: "palette" },
+  { id: 2, name: "Gastronomie", icon: "restaurant" },
+  { id: 3, name: "Habits", icon: "checkroom" },
+  { id: 4, name: "Architecture", icon: "architecture" },
+  { id: 5, name: "Musique & Danse", icon: "music_note" },
+];
+
 const Categories = () => {
   return (
-    <section>
-      <h2 className="text-sm font-semibold mb-4">Catégories</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
-        <div className="bg-[#C96F40] text-white rounded-lg flex flex-col items-center py-4 shadow-sm">
-          <div className="w-8 h-8 bg-white rounded flex items-center justify-center text-[#C96F40] mb-2">
-            <span className="material-icons text-lg">palette</span>
+    <section className="bg-white rounded-xl p-6 shadow-md border border-gray-200">
+      <h2 className="text-lg font-bold mb-4">Catégories</h2>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+        {categoryData.map((category) => (
+          <div
+            key={category.id}
+            className="bg-[#C96F40] text-white rounded-xl flex flex-col items-center py-5 shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer transform hover:-translate-y-1"
+          >
+            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#C96F40] mb-3">
+              <span className="material-icons text-xl">{category.icon}</span>
+            </div>
+            <p className="text-sm font-medium text-center px-2">
+              {category.name}
+            </p>
           </div>
-          <p className="text-xs text-center">Category 1</p>
-        </div>
-        <div className="bg-[#C96F40] text-white rounded-lg flex flex-col items-center py-4 shadow-sm">
-          <div className="w-8 h-8 bg-white rounded flex items-center justify-center text-[#C96F40] mb-2">
-            <span className="material-icons text-lg">restaurant</span>
-          </div>
-          <p className="text-xs text-center">Category 1</p>
-        </div>
-        <div className="bg-[#C96F40] text-white rounded-lg flex flex-col items-center py-4 shadow-sm">
-          <div className="w-8 h-8 bg-white rounded flex items-center justify-center text-[#C96F40] mb-2">
-            <span className="material-icons text-lg">checkroom</span>
-          </div>
-          <p className="text-xs text-center">Category 1</p>
-        </div>
-        <div className="bg-[#C96F40] text-white rounded-lg flex flex-col items-center py-4 shadow-sm">
-          <div className="w-8 h-8 bg-white rounded flex items-center justify-center text-[#C96F40] mb-2">
-            <span className="material-icons text-lg">architecture</span>
-          </div>
-          <p className="text-xs text-center">Category 1</p>
-        </div>
-        <div className="bg-[#C96F40] text-white rounded-lg flex flex-col items-center py-4 shadow-sm">
-          <div className="w-8 h-8 bg-white rounded flex items-center justify-center text-[#C96F40] mb-2">
-            <span className="material-icons text-lg">music_note</span>
-          </div>
-          <p className="text-xs text-center">Category 1</p>
-        </div>
-        <div className="bg-[#C96F40] text-white rounded-lg flex flex-col items-center py-4 shadow-sm">
-          <div className="w-8 h-8 bg-white rounded flex items-center justify-center text-[#C96F40] mb-2">
-            <span className="material-icons text-lg">sports_kabaddi</span>
-          </div>
-          <p className="text-xs text-center">Category 1</p>
-        </div>
+        ))}
       </div>
     </section>
   );

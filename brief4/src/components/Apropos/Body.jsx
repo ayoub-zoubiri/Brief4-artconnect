@@ -1,5 +1,6 @@
 import React from "react";
-import Footer from "../Publier/Footer";
+import Footer from "../Footer";
+
 export default function Body() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-50 py-8 px-4">
@@ -15,69 +16,70 @@ export default function Body() {
         </div>
 
         <div className="p-6 md:p-8 space-y-8">
-            {/* Section Notre mission avec image à gauche */}
-            <section className="flex flex-col md:flex-row gap-6 transform transition duration-300 ease-in-out hover:-translate-y-1">
+          {/* Section Notre mission avec image à gauche */}
+          <section className="flex flex-col md:flex-row gap-6 transform transition duration-300 ease-in-out hover:-translate-y-1">
             {/* Card Notre mission */}
             <div className="bg-[#C3714C] shadow-md rounded-xl p-4 md:p-6 border-l-4 border-[#1a2b3b] md:w-2/3">
-                <h2 className="text-white text-xl md:text-2xl font-semibold mb-2">
+              <h2 className="text-white text-xl md:text-2xl font-semibold mb-2">
                 Notre mission:
-                </h2>
-                <p className="text-white text-base md:text-lg leading-relaxed">
+              </h2>
+              <p className="text-white text-base md:text-lg leading-relaxed">
                 Promouvoir et préserver l'art et la culture marocaine, en
                 connectant artistes, artisans et passionnés pour partager et
                 célébrer le patrimoine marocain.
-                </p>
+              </p>
             </div>
 
             {/* Image séparée */}
             <img
-                src='./public/artisanat.webp'
-                alt="Mission"
-                className="w-full md:w-1/3 rounded-lg pt-0"
+              src="https://i.pravatar.cc/300?u=mission"
+              alt="Mission"
+              className="w-full md:w-1/3 rounded-lg pt-0"
             />
-            </section>
+          </section>
 
-
-        {/* Card Ce que vous pouvez faire */}
-            <section className="bg-[#1a2b3b] p-4 md:p-6 rounded-xl shadow-lg border-l-4 border-[#C3714C] transform transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg">
+          {/* Card Ce que vous pouvez faire */}
+          <section className="bg-[#1a2b3b] p-4 md:p-6 rounded-xl shadow-lg border-l-4 border-[#C3714C] transform transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg">
             <h2 className=" text-white text-xl md:text-2xl font-semibold mb-4">
-                Ce que vous pouvez faire:
+              Ce que vous pouvez faire:
             </h2>
             <ul className="space-y-3 text-white ">
-                <li className="flex items-start">
+              <li className="flex items-start">
                 <span className="text-amber-500 mr-2 mt-1">•</span>
                 <span className="text-base md:text-lg">
-                    Explore les créations (peintures, artisanat, architecture, gastronomie, habits traditionnels).
+                  Explore les créations (peintures, artisanat, architecture,
+                  gastronomie, habits traditionnels).
                 </span>
-                </li>
-                <li className="flex items-start">
+              </li>
+              <li className="flex items-start">
                 <span className="text-amber-500 mr-2 mt-1">•</span>
                 <span className="text-base md:text-lg">
-                    Participer aux événements culturels.
+                  Participer aux événements culturels.
                 </span>
-                </li>
-                <li className="flex items-start">
+              </li>
+              <li className="flex items-start">
                 <span className="text-amber-500 mr-2 mt-1">•</span>
                 <span className="text-base md:text-lg">
-                    Sauvegarder vos favoris (œuvres et traditions préférées).
+                  Sauvegarder vos favoris (œuvres et traditions préférées).
                 </span>
-                </li>
+              </li>
             </ul>
-            </section>
+          </section>
 
-            {/* Card Notre histoire */}
-            <section className="bg-[#C3714C] p-4 md:p-6 rounded-xl shadow-md border-l-4 border-[#1a2b3b]
-            transform transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg">
+          {/* Card Notre histoire */}
+          <section
+            className="bg-[#C3714C] p-4 md:p-6 rounded-xl shadow-md border-l-4 border-[#1a2b3b]
+            transform transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg"
+          >
             <h2 className="text-white text-xl md:text-2xl font-semibold mb-4">
-            Notre histoire:
+              Notre histoire:
             </h2>
             <p className="text-white text-base md:text-lg leading-relaxed">
-                Créé en 2025, ArtConnect Maroc a recensé plus de 200 traditions et œuvres, 
-                pour mettre en lumière les talents locaux et transmettre le savoir-faire marocain.
+              Créé en 2025, ArtConnect Maroc a recensé plus de 200 traditions et
+              œuvres, pour mettre en lumière les talents locaux et transmettre
+              le savoir-faire marocain.
             </p>
-            </section>
-
-
+          </section>
 
           {/* Section Nos valeurs */}
           <section>
@@ -109,12 +111,14 @@ export default function Body() {
                   Communauté:
                 </h3>
                 <p className="text-white text-sm md:text-base">
-                  Créer un espace où artistes et amateurs partagent leurs passions.
+                  Créer un espace où artistes et amateurs partagent leurs
+                  passions.
                 </p>
               </div>
             </div>
           </section>
         </div>
+        <Footer />
       </div>
     </div>
   );

@@ -1,11 +1,12 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Accueil from './pages/Accueil';
-import Publier from './pages/Publier';
-import Favoris from './pages/Favoris';
-import About from './pages/About';
-import Admin from './pages/Admin';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Accueil from "./pages/Accueil";
+import Publier from "./pages/Publier";
+import Favoris from "./pages/Favoris";
+import About from "./pages/About";
+import Admin from "./pages/Admin";
+import Details from "./pages/Details";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/favoris" element={<Favoris />} />
           <Route path="/about" element={<About />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/details" element={<Details />} />
         </Routes>
         <Footer />
       </div>

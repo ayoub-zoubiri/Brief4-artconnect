@@ -1,6 +1,6 @@
-import AdminSidebar from '../components/Admin/AdminSidebar';
-import AdminHeader from '../components/Admin/AdminHeader';
-import AdminContentList from '../components/Admin/AdminContentList';
+import AdminSidebar from "../components/Admin/AdminSidebar";
+import AdminHeader from "../components/Admin/AdminHeader";
+import AdminContentList from "../components/Admin/AdminContentList";
 
 const Admin = () => {
   return (
@@ -9,13 +9,11 @@ const Admin = () => {
 
       <div className="flex">
         <AdminSidebar />
-        
+
         <div className="flex-1 p-6">
           <AdminContentList />
         </div>
       </div>
-
-
     </div>
   );
 };
